@@ -1,0 +1,13 @@
+﻿<Window x:Class="DogAPI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:DogAPI.ViewModel"
+        Title="DogAPI" Width="400" Height="400" ResizeMode="NoResize">
+    <Window.DataContext>
+        <vm:DogViewModel />
+    </Window.DataContext>
+    <Grid>
+        <Image Source="{Binding ImageUrl}" Stretch="Uniform" />
+        <Button Content="Обновить" Command="{Binding RefreshCommand}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" />
+    </Grid>
+</Window>
